@@ -1,0 +1,18 @@
+diff -urN docker-1.5.orig/Makefile docker-1.5/Makefile
+--- docker-1.5.orig/Makefile	Wed Nov 20 11:20:49 2002
++++ docker-1.5/Makefile	Sun Jan 19 13:43:17 2003
+@@ -5,13 +5,10 @@
+ #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#
+ 
+ # Change this PREFIX to where you want docker to be installed
+-PREFIX=/usr/local
++PREFIX=/usr
+ # Change this XLIBPATH to point to your X11 development package's installation
+ XLIBPATH=/usr/X11R6/lib
+ 
+-# Sets some flags for stricter compiling
+-CFLAGS=-pedantic -Wall -W -O
+-
+ #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#
+ #                                                                 #
+ #  Leave the rest of the Makefile alone if you want it to build!  #
