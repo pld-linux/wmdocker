@@ -6,6 +6,7 @@ Release:	1
 License:	GPL v2
 Group:		X11/Applications
 Source0:	http://icculus.org/openbox/docker/%{name}-%{version}.tar.gz
+# Source0-md5:	349320bebd43babb8b43e11c7aae0293
 Patch0:		%{name}-fix.patch
 URL:		http://icculus.org/openbox/docker
 BuildRequires:	XFree86-devel
