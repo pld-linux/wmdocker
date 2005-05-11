@@ -30,12 +30,13 @@ zasobnika systemowego bez uruchamiania paneli KDE/GNOME.
 %setup -q
 
 %build
-%{__make} CFLAGS="-pedantic -Wall -W %{rpmcflags}"
+%{__make} \
+	CFLAGS="-pedantic -Wall -W %{rpmcflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_bindir}
-install -c %{name} $RPM_BUILD_ROOT%{_bindir}
+install %{name} $RPM_BUILD_ROOT%{_bindir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
