@@ -12,6 +12,7 @@ URL:		http://icculus.org/openbox/2/docker/
 BuildRequires:	XFree86-devel
 BuildRequires:	glib2-devel
 BuildRequires:	pkgconfig
+BuildRequires:	sed >= 4.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -28,6 +29,7 @@ zasobnika systemowego bez uruchamiania paneli KDE/GNOME.
 
 %prep
 %setup -q
+sed -i "s#X11R6/lib#X11R6/%{_lib}#g" Makefile
 
 %build
 %{__make} \
