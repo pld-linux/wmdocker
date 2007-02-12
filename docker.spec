@@ -1,5 +1,5 @@
 Summary:	A docking application
-Summary(pl.UTF-8):   Program dokujący
+Summary(pl.UTF-8):	Program dokujący
 Name:		docker
 Version:	1.5
 Release:	1
