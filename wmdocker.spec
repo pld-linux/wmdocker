@@ -1,13 +1,13 @@
 Summary:	A docking application
 Summary(pl.UTF-8):	Program dokujący
-Name:		docker
+Name:		wmdocker
 Version:	1.5
-Release:	2
-License:	GPL v2
+Release:	3
+License:	GPL v2+
 Group:		X11/Applications
-Source0:	http://icculus.org/openbox/2/docker/%{name}-%{version}.tar.gz
+Source0:	http://icculus.org/openbox/2/docker/docker-%{version}.tar.gz
 # Source0-md5:	349320bebd43babb8b43e11c7aae0293
-Patch0:		%{name}-fix.patch
+Patch0:		docker-fix.patch
 URL:		http://icculus.org/openbox/2/docker/
 BuildRequires:	glib2-devel
 BuildRequires:	pkgconfig
@@ -28,7 +28,7 @@ jakiegokolwiek innego środowiska, umożliwiając tym samym posiadanie
 zasobnika systemowego bez uruchamiania paneli KDE/GNOME.
 
 %prep
-%setup -q
+%setup -q -n docker-%{version}
 sed -i "s#X11R6/lib#X11R6/%{_lib}#g" Makefile
 
 %build
@@ -39,7 +39,7 @@ sed -i "s#X11R6/lib#X11R6/%{_lib}#g" Makefile
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_bindir}
-install -p %{name} $RPM_BUILD_ROOT%{_bindir}
+install -p docker $RPM_BUILD_ROOT%{_bindir}/%{name}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
